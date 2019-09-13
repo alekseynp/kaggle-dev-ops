@@ -40,4 +40,5 @@ release-csv:
 	cp $(SUBMISSION) submission_csv/out.csv
 
 	kaggle datasets version -m "$(SUBMISSION)" -p submission_csv -r tar
+	sleep 10s
 	kaggle kernels push -p submission_csv/
